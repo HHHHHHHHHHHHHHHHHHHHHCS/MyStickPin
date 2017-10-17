@@ -5,10 +5,15 @@ using UnityEngine;
 public class RotateSelf : MonoBehaviour
 {
     public float speed = 90;
+    public bool isFail;
 
     private void Update()
     {
-        transform.Rotate(new Vector3(0, 0, speed * Time.deltaTime));
+        if(!isFail)
+        {
+            transform.Rotate(new Vector3(0, 0, speed * Time.deltaTime));
+        }
+
     }
 
 }
